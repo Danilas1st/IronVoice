@@ -1,0 +1,39 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.contctsPage 
+		.section_in 
+			.contactsPage_main 
+				.contactPage_head 
+					h2 НАШИ КОНТАКТЫ
+				.contactPage_info-top 
+					.contactPage_mobil
+						a(href="#")
+							+icon('call') 
+							p +7 (988) 602-66-66
+						a(href="#") 
+							+icon('call') 
+							p +7 (918) 606-06-08
+					.cotactPage_mail 
+						a(href="#")
+							+icon('mail') 
+							p iron-voice@yandex.ru
+					.cotactPage_social
+						ul.social-list.list-page
+							-for(i = 0; i < 3; i++)
+								- let icons = ['ph:whatsapp-logo-thin', 'ph:telegram-logo-thin', 'arcticons:vk']
+								- let mod = ['green', 'blue', 'dark-blue']
+									li(class=mod[i]) 
+										a(href="#")
+											span(data-icon=`${icons[i]}` class="iconify")
+				.contactPage_bottom
+					.contactPage_addres
+						.contactPage_addres_t
+							+icon('mapmark')
+							p Мы находимся по адресу:
+						.contactPage_addres_b
+							p г. Краснодар, Ростовское шоссе 17-й км
+					.contactPage_map
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab231bd3adcd3e4790446ad914f63ea5627faffde037fa40dec74e0a236006153&amp;width=1133&amp;height=566&amp;lang=ru_RU&amp;scroll=true"></script>

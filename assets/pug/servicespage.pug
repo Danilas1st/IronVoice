@@ -1,0 +1,38 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.page
+		.section_in 
+			.page_main 
+				.page_head 
+					h2 Порошковая покраска
+					.page_btn.btn.trigger(data-target="form")
+						button(type="button") Заказать услугу
+			.page_info 
+				p Lorem ipsum dolor sit amet consectetur. Vitae enim eget amet diam vel orci. Ornare facilisis facilisis eget at diam ac accumsan. Urna mauris posuere tempor malesuada. Etiam elit egestas vestibulum mattis. Sit adipiscing dis eget leo nibh platea felis diam. Lacinia eget sit amet tincidunt. Fermentum purus curabitur pellentesque volutpat interdum tempor parturient.
+			.production_slider_w.page-s.pb15
+					.slider-nav_ser
+						.slide-prev.prod-prev.scale-hover
+							+icon('prev')
+						.slide-next.prod-next.scale-hover
+							+icon('next')
+					.production_slider.swiper.group-slider.page_sl
+						.swiper-wrapper
+							-for(i = 0; i < 14; i++)
+								- let idx = i % 7
+									.swiper-slide 
+										.production-slide.page_pr
+											img(src=`i/slider/slider-${idx}.jpg`, alt="")
+		section.info 
+			.section_in 
+				.info_main.showMoreBlock 
+					.info_head.page_s 
+						h2 ЗАГОЛОВОК СЕО ТЕКСТА
+					.info_txt.showMoreTxt
+						p Lorem ipsum dolor sit amet consectetur. Vitae enim eget amet diam vel orci. Ornare facilisis facilisis eget at diam ac accumsan. Urna mauris posuere tempor malesuada. Etiam elit egestas vestibulum mattis. Sit adipiscing dis eget leo nibh platea felis diam. Lacinia eget sit amet tincidunt. Fermentum purus curabitur pellentesque volutpat interdum tempor parturient.
+						p Vel laoreet vulputate vitae venenatis ut volutpat malesuada massa. Posuere fames condimentum a condimentum volutpat tortor elit. Cursus aliquet amet et penatibus. Nulla tortor scelerisque lobortis augue vitae porttitor libero tristique nam. Enim in ornare eu viverra egestas. Sociis sit ut lectus id amet id.
+						p Lorem ipsum dolor sit amet consectetur. Vitae enim eget amet diam vel orci. Ornare facilisis facilisis eget at diam ac accumsan. Urna mauris posuere tempor malesuada. Etiam elit egestas vestibulum mattis. Sit adipiscing dis eget leo nibh platea felis diam. Lacinia eget sit amet tincidunt. Fermentum purus curabitur pellentesque volutpat interdum tempor parturient.
+						p Vel laoreet vulputate vitae venenatis ut volutpat malesuada massa. Posuere fames condimentum a condimentum volutpat tortor elit. Cursus aliquet amet et penatibus. Nulla tortor scelerisque lobortis augue vitae porttitor libero tristique nam. Enim in ornare eu viverra egestas. Sociis sit ut lectus id amet id.
+					.info_btn_more.showMoreBtn.btn ПОКАЗАТЬ БОЛЬШЕ

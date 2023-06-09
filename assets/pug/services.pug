@@ -1,0 +1,33 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.services.sec_anim.bgrey
+		.section_in 
+			.services_main 
+				.services_head-m
+					h5.mb10.el_anim Наши Услуги
+				.services_txt 
+					p Lorem ipsum dolor sit amet consectetur. Vitae enim eget amet diam vel orci. Ornare facilisis facilisis eget at diam ac accumsan. Urna mauris posuere tempor malesuada. Etiam elit egestas vestibulum mattis. Sit adipiscing dis eget leo nibh platea felis diam.
+				ul.services_list.grid-3 
+					-for(i = 0; i < 9; i++)
+						- let serviceTitle = ['Порошковая покраска', 'Плазморез', 'Трубогиб', 'Сварка аргон и обычная', 'Восстановление дисков на авто с порошковой покраской', 'Автоматика для ворот откатных и распашных', 'Ворота секционные установка монтаж', 'Ворота распашные', '3D заборы и навесы']
+						li.services_item.el_anim
+							a(href="#" class="trigger" data-target="service") 
+								.services_item--img 
+									img(src=`i/services/${i}.jpg`, alt="")
+									.service-plus.scale-hover 
+										+icon('plus')
+								h3.fz24=serviceTitle[i]
+	section.info 
+		.section_in 
+			.info_main.showMoreBlock 
+				.info_head 
+					h2 ЗАГОЛОВОК СЕО ТЕКСТА
+				.info_txt.showMoreTxt
+					p Lorem ipsum dolor sit amet consectetur. Vitae enim eget amet diam vel orci. Ornare facilisis facilisis eget at diam ac accumsan. Urna mauris posuere tempor malesuada. Etiam elit egestas vestibulum mattis. Sit adipiscing dis eget leo nibh platea felis diam. Lacinia eget sit amet tincidunt. Fermentum purus curabitur pellentesque volutpat interdum tempor parturient.
+					p Vel laoreet vulputate vitae venenatis ut volutpat malesuada massa. Posuere fames condimentum a condimentum volutpat tortor elit. Cursus aliquet amet et penatibus. Nulla tortor scelerisque lobortis augue vitae porttitor libero tristique nam. Enim in ornare eu viverra egestas. Sociis sit ut lectus id amet id.
+					p Lorem ipsum dolor sit amet consectetur. Vitae enim eget amet diam vel orci. Ornare facilisis facilisis eget at diam ac accumsan. Urna mauris posuere tempor malesuada. Etiam elit egestas vestibulum mattis. Sit adipiscing dis eget leo nibh platea felis diam. Lacinia eget sit amet tincidunt. Fermentum purus curabitur pellentesque volutpat interdum tempor parturient.
+					p Vel laoreet vulputate vitae venenatis ut volutpat malesuada massa. Posuere fames condimentum a condimentum volutpat tortor elit. Cursus aliquet amet et penatibus. Nulla tortor scelerisque lobortis augue vitae porttitor libero tristique nam. Enim in ornare eu viverra egestas. Sociis sit ut lectus id amet id.
+				.info_btn_more.showMoreBtn.btn ПОКАЗАТЬ БОЛЬШЕ
